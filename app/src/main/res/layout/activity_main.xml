@@ -6,14 +6,20 @@
     android:layout_height="match_parent"
     tools:context="qzy.com.toolslibrary.MainActivity">
 
+    <ListView
+        android:id="@+id/swipe_target"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/background"
+        android:dividerHeight="1dp"></ListView>
+
     <qzy.com.utilslib.svgText.VectorCompatTextView
         android:id="@+id/homePageIcon"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:gravity="center"
         android:text="通讯录"
         android:textColor="#f84848"
+        android:visibility="gone"
         app:drawableTopCompat="@drawable/svg_ic_txl"
         app:tintDrawableInTextColor="true"/>
 
