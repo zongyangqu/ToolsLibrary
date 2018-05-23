@@ -1,3 +1,8 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">ToolsLibrary</string>
+    <string name="anim_name">我是%s</string>
+
+    <string name="text_ack_msg">Read</string>
+    <string name="text_delivered_msg">Delivered</string>
+    <string name="attach_file" tools:keep="@string/attach_file">File</string>
 </resources>

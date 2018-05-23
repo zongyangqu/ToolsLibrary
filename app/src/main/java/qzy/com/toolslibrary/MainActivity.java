@@ -14,6 +14,10 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import qzy.com.toolslibrary.adapter.MainAdapter;
+import qzy.com.toolslibrary.ui.HeadViewRecyclerViewActivity;
+import qzy.com.toolslibrary.ui.NormalRecyclerViewActivity;
+import qzy.com.toolslibrary.ui.RecordAudio2Activity;
+import qzy.com.toolslibrary.ui.RecordAudioActivity;
 import qzy.com.toolslibrary.ui.SVGActivity;
 import qzy.com.utilslib.Person;
 import qzy.com.utilslib.base.BaseActivity;
@@ -36,6 +40,18 @@ public class MainActivity extends BaseActivity {
                     case 0:
                         startActivity(new Intent(getActivity(), SVGActivity.class));
                         break;
+                    case 1:
+                        startActivity(new Intent(getActivity(), HeadViewRecyclerViewActivity.class));
+                        break;
+                    case 2:
+                        startActivity(new Intent(getActivity(), NormalRecyclerViewActivity.class));
+                        break;
+                    case 3:
+                        startActivity(new Intent(getActivity(), RecordAudioActivity.class));
+                        break;
+                    case 4:
+                        startActivity(new Intent(getActivity(), RecordAudio2Activity.class));
+                        break;
                 }
             }
         });
@@ -50,6 +66,10 @@ public class MainActivity extends BaseActivity {
     public List<String> initData(){
         List<String> data = new ArrayList<String>();
         data.add("svg图形TextView");
+        data.add("封装有headView的RecyclerView");
+        data.add("封装普通的RecyclerView");
+        data.add("仿微信录制语音（1）");
+        data.add("仿微信录制语音（2）");
         return data;
     }
 }

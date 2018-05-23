@@ -1,8 +1,8 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.2"
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
     defaultConfig {
         applicationId "qzy.com.toolslibrary"
         minSdkVersion 15
@@ -10,6 +10,7 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -26,6 +27,11 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    //RxPermissions 6.0系统以上权限授权
+    compile 'com.tbruyelle.rxpermissions:rxpermissions:0.9.4@aar'
+    compile "io.reactivex:rxjava:1.1.5"
+    compile "io.reactivex:rxandroid:1.1.0"
     testCompile 'junit:junit:4.12'
     compile project(path: ':utilslib')
+
 }
