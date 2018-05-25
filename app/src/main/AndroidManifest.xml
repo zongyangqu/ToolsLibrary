@@ -42,6 +42,15 @@
         <activity android:name=".ui.RecordAudio2Activity"
             android:screenOrientation="portrait"/>
 
+        <activity android:name=".ui.PicetureMainActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.PhotoSelectActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.PhotoFragmentActivity"
+            android:screenOrientation="portrait"/>
+
         <service android:name=".service.PlayService" />
 
     </application>

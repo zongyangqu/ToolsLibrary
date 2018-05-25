@@ -1,9 +1,6 @@
 package qzy.com.toolslibrary;
 
 import android.content.Intent;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -12,16 +9,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
-import butterknife.ButterKnife;
 import qzy.com.toolslibrary.adapter.MainAdapter;
 import qzy.com.toolslibrary.ui.HeadViewRecyclerViewActivity;
 import qzy.com.toolslibrary.ui.NormalRecyclerViewActivity;
+import qzy.com.toolslibrary.ui.PicetureMainActivity;
 import qzy.com.toolslibrary.ui.RecordAudio2Activity;
 import qzy.com.toolslibrary.ui.RecordAudioActivity;
 import qzy.com.toolslibrary.ui.SVGActivity;
-import qzy.com.utilslib.Person;
 import qzy.com.utilslib.base.BaseActivity;
-import qzy.com.utilslib.svgText.VectorCompatTextView;
 
 public class MainActivity extends BaseActivity {
 
@@ -52,6 +47,9 @@ public class MainActivity extends BaseActivity {
                     case 4:
                         startActivity(new Intent(getActivity(), RecordAudio2Activity.class));
                         break;
+                    case 5:
+                        startActivity(new Intent(getActivity(), PicetureMainActivity.class));
+                        break;
                 }
             }
         });
@@ -70,6 +68,7 @@ public class MainActivity extends BaseActivity {
         data.add("封装普通的RecyclerView");
         data.add("仿微信录制语音（1）");
         data.add("仿微信录制语音（2）");
+        data.add("图片(裁剪压缩)、视频(录制)、音频选择器");
         return data;
     }
 }
