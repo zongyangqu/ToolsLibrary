@@ -1,1 +1,1 @@
-include ':app', ':utilslib'
+include ':app', ':utilslib',':picture_library',':ucrop'
