@@ -60,4 +60,7 @@
     <string name="picture_audio_error">音频已损坏</string>
     <string name="picture_confirm">确定</string>
     <!-- picture 库 end -->
+
+    <string name="cancel">取消</string>
+    <string name="sure">确认</string>
 </resources>

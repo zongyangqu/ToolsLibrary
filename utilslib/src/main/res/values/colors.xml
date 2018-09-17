@@ -25,5 +25,8 @@
     <color name="color_orange">#E0FF6100</color>
     <!-- picture 库 end -->
 
+    <color name="text_blue">#0076FF</color>
+    <color name="text_black">#333333</color>
+
 
 </resources>

@@ -29,6 +29,7 @@ public class SVGActivity extends BaseActivity{
 
     @Override
     protected void onViewCreated() {
+        vectorCompatTextView.setDrawableTopCompat(R.drawable.ic_homepage);
         vectorCompatTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

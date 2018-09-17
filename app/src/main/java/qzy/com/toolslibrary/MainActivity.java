@@ -10,6 +10,7 @@ import java.util.List;
 
 import butterknife.Bind;
 import qzy.com.toolslibrary.adapter.MainAdapter;
+import qzy.com.toolslibrary.ui.AppUpdateActivity;
 import qzy.com.toolslibrary.ui.HeadViewRecyclerViewActivity;
 import qzy.com.toolslibrary.ui.NormalRecyclerViewActivity;
 import qzy.com.toolslibrary.ui.PicetureMainActivity;
@@ -54,6 +55,9 @@ public class MainActivity extends BaseActivity {
                     case 6:
                         startActivity(new Intent(getActivity(), TabBarActivity.class));
                         break;
+                    case 7:
+                        startActivity(new Intent(getActivity(), AppUpdateActivity.class));
+                        break;
                 }
             }
         });
@@ -74,6 +78,7 @@ public class MainActivity extends BaseActivity {
         data.add("仿微信录制语音（2）");
         data.add("图片(裁剪压缩)、视频(录制)、音频选择器");
         data.add("TabBar支持网络图片");
+        data.add("app更新下载安装");
         return data;
     }
 }

@@ -33,6 +33,7 @@ public class VectorCompatTextView extends AppCompatCheckedTextView {
     private boolean isDrawableAdjustViewHeight;
     private int mDrawableWidth;
     private int mDrawableHeight;
+    private Context mContext;
 
     public VectorCompatTextView(Context context) {
         this(context, null);
@@ -44,11 +45,22 @@ public class VectorCompatTextView extends AppCompatCheckedTextView {
 
     public VectorCompatTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-
         initAttrs(context, attrs);
     }
 
+    public void setDrawableTopCompat(int resId){
+        Drawable dt = null;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            dt = mContext.getDrawable(resId);
+        } else {
+            int dtId = resId;
+            if (dtId != -1)
+                dt = AppCompatResources.getDrawable(mContext, dtId);
+        }
+        initDrawables(null, dt, null, null);
+    }
     private void initAttrs(Context context, AttributeSet attrs) {
+        mContext = context;
         if (attrs != null) {
             TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.VectorCompatTextView);
 

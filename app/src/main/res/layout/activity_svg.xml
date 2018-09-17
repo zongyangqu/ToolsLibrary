@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="horizontal" android:layout_width="match_parent"
     android:gravity="center"
     android:layout_height="match_parent">
+
+    <!--app:drawableTopCompat="@drawable/ic_homepage"-->
 
     <qzy.com.utilslib.svgText.VectorCompatTextView
         android:id="@+id/vectorCompatTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:text="通讯录"
         android:textColor="#333333"
-        app:drawableTopCompat="@drawable/ic_homepage"
+        app:tintDrawableInTextColor="true"/>
+
+    <qzy.com.utilslib.svgText.VectorCompatTextView
+        android:id="@+id/vectorCompatTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="通讯录1"
+        android:textColor="#333333"
         app:tintDrawableInTextColor="true"/>
 
 </LinearLayout>
