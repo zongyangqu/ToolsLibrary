@@ -16,6 +16,7 @@ import qzy.com.utilslib.appupdate.AppUpdateUtils;
 import qzy.com.utilslib.appupdate.UpdateCallback;
 import qzy.com.utilslib.appupdate.UpdateConfirmDialog;
 import qzy.com.utilslib.base.BaseActivity;
+import util.UpdateAppUtils;
 
 /**
  * 作者：quzongyang
@@ -99,6 +100,17 @@ public class AppUpdateActivity extends BaseActivity  implements View.OnClickList
 
     //基本更新
     private void updat1() {
+        /*UpdateAppUtils.from(this)
+                .serverVersionCode(2)
+                .serverVersionName("2.0")
+                .apkPath(apkPath)
+                .updateInfo("1.修复若干bug\n2.美化部分页面\n3.增加微信支付方式")
+                .isForce(false)
+//                .showNotification(false)
+//                .needFitAndroidN(false)
+                .update();*/
+
+
         AppUpdateUtils.from(this)
                 .serverVersionCode(2)
                 .serverVersionName("2.0")

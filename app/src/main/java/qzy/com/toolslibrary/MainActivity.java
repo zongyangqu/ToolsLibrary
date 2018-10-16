@@ -11,7 +11,9 @@ import java.util.List;
 import butterknife.Bind;
 import qzy.com.toolslibrary.adapter.MainAdapter;
 import qzy.com.toolslibrary.ui.AppUpdateActivity;
+import qzy.com.toolslibrary.ui.BackgroundActivity;
 import qzy.com.toolslibrary.ui.HeadViewRecyclerViewActivity;
+import qzy.com.toolslibrary.ui.LoggerActivity;
 import qzy.com.toolslibrary.ui.NormalRecyclerViewActivity;
 import qzy.com.toolslibrary.ui.PicetureMainActivity;
 import qzy.com.toolslibrary.ui.RecordAudio2Activity;
@@ -58,6 +60,12 @@ public class MainActivity extends BaseActivity {
                     case 7:
                         startActivity(new Intent(getActivity(), AppUpdateActivity.class));
                         break;
+                    case 8:
+                        startActivity(new Intent(getActivity(), BackgroundActivity.class));
+                        break;
+                    case 9:
+                        startActivity(new Intent(getActivity(), LoggerActivity.class));
+                        break;
                 }
             }
         });
@@ -79,6 +87,8 @@ public class MainActivity extends BaseActivity {
         data.add("图片(裁剪压缩)、视频(录制)、音频选择器");
         data.add("TabBar支持网络图片");
         data.add("app更新下载安装");
+        data.add("背景工具");
+        data.add("Logger 日志库");
         return data;
     }
 }

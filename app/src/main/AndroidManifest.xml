@@ -68,8 +68,14 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/app_file_paths"/>
         </provider>
+
+        <activity android:name=".ui.BackgroundActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.LoggerActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 
