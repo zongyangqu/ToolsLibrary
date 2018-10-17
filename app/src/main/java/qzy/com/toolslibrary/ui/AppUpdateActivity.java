@@ -24,6 +24,9 @@ import util.UpdateAppUtils;
  * 创建时间：2018/5/24
  *
  * 类描述：app更新下载安装
+ * 这里有个坑 就是在清单文件注册的静态自定义广播在8.0系统上 接收不到
+ * 解决方案：1.动态注册
+ *                      2.targetSdkVersion 改为25或以下
  *
  * github：https://github.com/teprinciple/UpdateAppDemo
  */
@@ -112,8 +115,8 @@ public class AppUpdateActivity extends BaseActivity  implements View.OnClickList
 
 
         AppUpdateUtils.from(this)
-                .serverVersionCode(2)
-                .serverVersionName("2.0")
+                .serverVersionCode(3)
+                .serverVersionName("3.0")
                 .apkPath(apkPath)
                 .updateInfo("1.修复若干bug\n2.美化部分页面\n3.增加微信支付方式")
                 .isForce(isForce)

@@ -53,7 +53,7 @@ public class AppUpdateReceiver extends BroadcastReceiver {
                 if ( AppUpdateUtils.needFitAndroidN &&  Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
                     i.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
                     Uri contentUri = FileProvider.getUriForFile(
-                            context, context.getPackageName() + ".fileprovider", apkFile);
+                            context, context.getPackageName() + ".appfileprovider", apkFile);
                     i.setDataAndType(contentUri, "application/vnd.android.package-archive");
                 } else {
                     i.setDataAndType(Uri.fromFile(apkFile),
