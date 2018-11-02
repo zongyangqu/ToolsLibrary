@@ -4,12 +4,14 @@ import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import qzy.com.toolslibrary.adapter.MainAdapter;
+import qzy.com.toolslibrary.ui.AppResetActivity;
 import qzy.com.toolslibrary.ui.AppUpdateActivity;
 import qzy.com.toolslibrary.ui.BackgroundActivity;
 import qzy.com.toolslibrary.ui.HeadViewRecyclerViewActivity;
@@ -19,8 +21,9 @@ import qzy.com.toolslibrary.ui.PicetureMainActivity;
 import qzy.com.toolslibrary.ui.RecordAudio2Activity;
 import qzy.com.toolslibrary.ui.RecordAudioActivity;
 import qzy.com.toolslibrary.ui.SVGActivity;
+import qzy.com.toolslibrary.ui.SplashActivity;
 import qzy.com.toolslibrary.ui.TabBarActivity;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 
 public class MainActivity extends BaseActivity {
 
@@ -28,8 +31,11 @@ public class MainActivity extends BaseActivity {
     ListView swipe_target;
     MainAdapter mainAdapter;
 
+    public static List<String> list = new ArrayList<String>();
+
     @Override
     protected void onViewCreated() {
+        list.add("解决android应用被强杀或应用被回收导致的空指针问题");
         mainAdapter = new MainAdapter(initData());
         swipe_target.setAdapter(mainAdapter);
         swipe_target.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -66,9 +72,19 @@ public class MainActivity extends BaseActivity {
                     case 9:
                         startActivity(new Intent(getActivity(), LoggerActivity.class));
                         break;
+                    case 10:
+                        startActivity(new Intent(getActivity(), AppResetActivity.class));
+                        break;
                 }
             }
         });
+    }
+
+    @Override
+    protected void protectApp() {
+        Toast.makeText(getApplicationContext(),"应用被回收重启走流程",Toast.LENGTH_LONG).show();
+        startActivity(new Intent(this, SplashActivity.class));
+        finish();
     }
 
     @Override
@@ -89,6 +105,7 @@ public class MainActivity extends BaseActivity {
         data.add("app更新下载安装");
         data.add("背景工具");
         data.add("Logger 日志库");
+        data.add("内存回收app重启");
         return data;
     }
 }

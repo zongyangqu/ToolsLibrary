@@ -1,7 +1,7 @@
 package qzy.com.toolslibrary.ui;
 
 import qzy.com.toolslibrary.R;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 
 /**
  * author : quzongyang

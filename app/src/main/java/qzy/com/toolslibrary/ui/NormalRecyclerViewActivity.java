@@ -10,7 +10,7 @@ import butterknife.Bind;
 import qzy.com.toolslibrary.R;
 import qzy.com.toolslibrary.adapter.AnimNormalAdapter;
 import qzy.com.toolslibrary.bean.Anim;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 
 /**
  * 作者：quzongyang
@@ -20,7 +20,7 @@ import qzy.com.utilslib.base.BaseActivity;
  * 类描述：
  */
 
-public class NormalRecyclerViewActivity extends BaseActivity{
+public class NormalRecyclerViewActivity extends BaseActivity {
 
 
     @Bind(R.id.recyclerView)

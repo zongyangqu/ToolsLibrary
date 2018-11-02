@@ -13,7 +13,7 @@ import butterknife.Bind;
 import qzy.com.toolslibrary.R;
 import qzy.com.toolslibrary.adapter.AnimAdapter;
 import qzy.com.toolslibrary.bean.Anim;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 import qzy.com.utilslib.recyclerAdapter.BaseRecyclerAdapter;
 
 /**

@@ -31,7 +31,7 @@ import io.reactivex.disposables.Disposable;
 import qzy.com.toolslibrary.R;
 import qzy.com.toolslibrary.adapter.GridImageAdapter;
 import qzy.com.toolslibrary.utils.FullyGridLayoutManager;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 
 /**
  * 作者：quzongyang
@@ -41,7 +41,7 @@ import qzy.com.utilslib.base.BaseActivity;
  * 类描述：
  */
 
-public class PhotoSelectActivity extends BaseActivity  implements View.OnClickListener,
+public class PhotoSelectActivity extends BaseActivity implements View.OnClickListener,
         RadioGroup.OnCheckedChangeListener, CompoundButton.OnCheckedChangeListener {
     private final static String TAG = PhotoSelectActivity.class.getSimpleName();
     private List<LocalMedia> selectList = new ArrayList<>();

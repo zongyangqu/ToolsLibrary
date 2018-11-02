@@ -5,13 +5,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.pm.PackageManager;
-import android.os.Bundle;
 import android.os.IBinder;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
@@ -33,7 +27,7 @@ import qzy.com.toolslibrary.bean.MessageBean;
 import qzy.com.toolslibrary.service.PlayService;
 import qzy.com.toolslibrary.utils.AppCache;
 import qzy.com.toolslibrary.utils.TimeUtils;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 import qzy.com.utilslib.voicerecorder.widget.VoiceRecorderView;
 
 /**
@@ -46,7 +40,7 @@ import qzy.com.utilslib.voicerecorder.widget.VoiceRecorderView;
  * github：https://github.com/wangshanhai/VoiceRecorder
  */
 
-public class RecordAudioActivity extends BaseActivity{
+public class RecordAudioActivity extends BaseActivity {
 
 
     protected VoiceRecorderView voiceRecorderView;

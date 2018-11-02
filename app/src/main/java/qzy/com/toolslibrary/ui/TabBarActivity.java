@@ -16,7 +16,7 @@ import com.bumptech.glide.request.RequestOptions;
 import java.util.ArrayList;
 
 import qzy.com.toolslibrary.R;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 import qzy.com.utilslib.tabbar.CustomizeTabLayout;
 import qzy.com.utilslib.tabbar.TabBean;
 
@@ -30,7 +30,7 @@ import qzy.com.utilslib.tabbar.TabBean;
  * github：https://github.com/LuckSiege/PictureSelector
  */
 
-public class TabBarActivity extends BaseActivity  implements View.OnClickListener {
+public class TabBarActivity extends BaseActivity implements View.OnClickListener {
 
     private ArrayList<TabBean> mTabbeans = new ArrayList<>();
 

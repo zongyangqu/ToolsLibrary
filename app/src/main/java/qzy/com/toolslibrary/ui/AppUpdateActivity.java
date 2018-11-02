@@ -12,11 +12,10 @@ import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 import qzy.com.toolslibrary.R;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 import qzy.com.utilslib.appupdate.AppUpdateUtils;
 import qzy.com.utilslib.appupdate.UpdateCallback;
 import qzy.com.utilslib.appupdate.UpdateConfirmDialog;
-import qzy.com.utilslib.base.BaseActivity;
-import util.UpdateAppUtils;
 
 /**
  * 作者：quzongyang
@@ -31,7 +30,7 @@ import util.UpdateAppUtils;
  * github：https://github.com/teprinciple/UpdateAppDemo
  */
 
-public class AppUpdateActivity extends BaseActivity  implements View.OnClickListener {
+public class AppUpdateActivity extends BaseActivity implements View.OnClickListener {
 
     //服务器apk path,这里放了百度云盘的apk 作为测试
     String apkPath = "http://issuecdn.baidupcs.com/issue/netdisk/apk/BaiduNetdisk_7.15.1.apk";

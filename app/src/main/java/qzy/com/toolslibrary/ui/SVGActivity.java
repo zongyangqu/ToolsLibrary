@@ -1,14 +1,10 @@
 package qzy.com.toolslibrary.ui;
-
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 import butterknife.Bind;
 import qzy.com.toolslibrary.R;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 import qzy.com.utilslib.svgText.VectorCompatTextView;
 
 /**
@@ -19,7 +15,7 @@ import qzy.com.utilslib.svgText.VectorCompatTextView;
  * 类描述：
  */
 
-public class SVGActivity extends BaseActivity{
+public class SVGActivity extends BaseActivity {
 
 
     @Bind(R.id.vectorCompatTextView)

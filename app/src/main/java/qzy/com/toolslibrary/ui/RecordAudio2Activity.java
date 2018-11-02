@@ -25,17 +25,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import qzy.com.toolslibrary.R;
-import qzy.com.toolslibrary.adapter.EaseMessageAdapter;
 import qzy.com.toolslibrary.adapter.RecorderAdapter;
-import qzy.com.toolslibrary.bean.MessageBean;
 import qzy.com.toolslibrary.bean.Recorder;
-import qzy.com.toolslibrary.service.PlayService;
-import qzy.com.toolslibrary.utils.AppCache;
-import qzy.com.toolslibrary.utils.TimeUtils;
-import qzy.com.utilslib.base.BaseActivity;
+import qzy.com.toolslibrary.utils.base.BaseActivity;
 import qzy.com.utilslib.recorder.AudioRecorderButton;
 import qzy.com.utilslib.recorder.MediaManager;
-import qzy.com.utilslib.voicerecorder.widget.VoiceRecorderView;
 
 /**
  * 作者：quzongyang
@@ -47,7 +41,7 @@ import qzy.com.utilslib.voicerecorder.widget.VoiceRecorderView;
  * csdn：https://blog.csdn.net/lhk147852369/article/details/78658055
  */
 
-public class RecordAudio2Activity extends BaseActivity{
+public class RecordAudio2Activity extends BaseActivity {
 
 
     private ListView mListView;
