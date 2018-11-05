@@ -40,7 +40,7 @@ public class BaseApplication extends MultiDexApplication {
                 .recoverInBackground(false)
                 .recoverStack(true)
                 .mainPage(MainActivity.class)
-                .recoverEnabled(true)
+                .recoverEnabled(false)
                 .callback(new MyCrashCallback())
                 .silent(false, Recovery.SilentMode.RECOVER_ACTIVITY_STACK)
                 //.skip(TestActivity.class)

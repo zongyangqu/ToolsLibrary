@@ -20,6 +20,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
+        <!--友盟渠道渠道号-->
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${UMENG_CHANNEL_VALUE}" />
+
         <activity android:name=".ui.SplashActivity"
                         android:screenOrientation="portrait">
             <intent-filter>

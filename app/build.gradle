@@ -1,6 +1,20 @@
 apply plugin: 'com.android.application'
 
+def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("UTC"))
+}
+
 android {
+
+    signingConfigs {
+        debugBuild {
+            keyAlias "qzy_keystore"
+            keyPassword "123456"
+            storeFile file("keystore/qzy_keystore.jks")
+            storePassword "123456"
+        }
+    }
+
     compileSdkVersion 27
     buildToolsVersion "27.0.2"
     defaultConfig {
@@ -13,9 +27,52 @@ android {
         multiDexEnabled true
     }
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //是否混淆
+            minifyEnabled true
+            //是否进行zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+
+            applicationVariants.all { variant ->
+                variant.outputs.each { output ->
+                    def outputFile = output.outputFile
+                    if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                        // 输出apk名称为zejian_v1.0_2015-01-15_wandoujia.apk
+                        def fileName = "ToolsLib_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
+                        output.outputFile = new File(outputFile.parent, fileName)
+                    }
+                }
+            }
+        }
+    }
+
+    //配置多渠道
+    productFlavors {
+        zejian {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+        huawei {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+        _360 {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+        baidu {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+        }
+        wandoujia {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
         }
     }
 
