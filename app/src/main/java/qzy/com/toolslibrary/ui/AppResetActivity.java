@@ -11,6 +11,7 @@ import qzy.com.toolslibrary.utils.base.BaseActivity;
  * e-mail : quzongyang@xiaohe.com
  * time   : 2018/11/02
  * desc   : Android 内存被回收后直接重启APP 测试类    https://www.2cto.com/kf/201606/513992.html
+ *
  * 新建了一个App状态常量类(AppStatusConstant)用于方便统一参数，同时新建了一个AppStatus单例类，这个单例类中定义了一个int类型的参数，
  * 参数默认值为-1，也就是默认为进程关闭的状态，而这个值是什么时候被改变的呢，很简单在SpalshActivity的onCreate方法被改变就可以啦！
  * 在SpalshActivity中改成正常态2即可。
