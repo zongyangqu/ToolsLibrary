@@ -16,6 +16,11 @@
         app:stroke_color="#8c6822"
         app:stroke_width="2dp" />
 
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
 
 
 </LinearLayout>

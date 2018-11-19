@@ -20,6 +20,7 @@ import qzy.com.toolslibrary.ui.NormalRecyclerViewActivity;
 import qzy.com.toolslibrary.ui.PicetureMainActivity;
 import qzy.com.toolslibrary.ui.RecordAudio2Activity;
 import qzy.com.toolslibrary.ui.RecordAudioActivity;
+import qzy.com.toolslibrary.ui.RecyclerViewSampleActivity;
 import qzy.com.toolslibrary.ui.SVGActivity;
 import qzy.com.toolslibrary.ui.SplashActivity;
 import qzy.com.toolslibrary.ui.TabBarActivity;
@@ -46,33 +47,31 @@ public class MainActivity extends BaseActivity {
                         startActivity(new Intent(getActivity(), SVGActivity.class));
                         break;
                     case 1:
-                        startActivity(new Intent(getActivity(), HeadViewRecyclerViewActivity.class));
+                        startActivity(new Intent(getActivity(), RecyclerViewSampleActivity.class));
                         break;
+
                     case 2:
-                        startActivity(new Intent(getActivity(), NormalRecyclerViewActivity.class));
-                        break;
-                    case 3:
                         startActivity(new Intent(getActivity(), RecordAudioActivity.class));
                         break;
-                    case 4:
+                    case 3:
                         startActivity(new Intent(getActivity(), RecordAudio2Activity.class));
                         break;
-                    case 5:
+                    case 4:
                         startActivity(new Intent(getActivity(), PicetureMainActivity.class));
                         break;
-                    case 6:
+                    case 5:
                         startActivity(new Intent(getActivity(), TabBarActivity.class));
                         break;
-                    case 7:
+                    case 6:
                         startActivity(new Intent(getActivity(), AppUpdateActivity.class));
                         break;
-                    case 8:
+                    case 7:
                         startActivity(new Intent(getActivity(), BackgroundActivity.class));
                         break;
-                    case 9:
+                    case 8:
                         startActivity(new Intent(getActivity(), LoggerActivity.class));
                         break;
-                    case 10:
+                    case 9:
                         startActivity(new Intent(getActivity(), AppResetActivity.class));
                         break;
                 }
@@ -96,8 +95,7 @@ public class MainActivity extends BaseActivity {
     public List<String> initData(){
         List<String> data = new ArrayList<String>();
         data.add("svg图形TextView");
-        data.add("封装有headView的RecyclerView");
-        data.add("封装普通的RecyclerView");
+        data.add("RecyclerView");
         data.add("仿微信录制语音（1）");
         data.add("仿微信录制语音（2）");
         data.add("图片(裁剪压缩)、视频(录制)、音频选择器");

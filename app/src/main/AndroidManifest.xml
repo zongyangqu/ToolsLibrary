@@ -89,6 +89,15 @@
 
         <activity android:name=".ui.AppResetActivity"
             android:screenOrientation="portrait"/>
+
+        <activity android:name=".ui.RecyclerViewSampleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.StaggeredGridActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.TaoBaoSampleActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.StandardMultiActivity"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

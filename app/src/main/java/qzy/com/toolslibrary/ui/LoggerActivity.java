@@ -1,5 +1,7 @@
 package qzy.com.toolslibrary.ui;
 
+import android.widget.TextView;
+
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.Logger;
 
@@ -16,8 +18,12 @@ import qzy.com.toolslibrary.utils.base.BaseActivity;
 
 
 public class LoggerActivity extends BaseActivity {
+
+    String text = "android:name=\"com.baonahao.weixin.wxapi.WXEntryActivity\"";
     @Override
     protected void onViewCreated() {
+        TextView tvText = findViewById(R.id.tvText);
+
         Logger.addLogAdapter(new AndroidLogAdapter());
         Logger.d("hello");
     }

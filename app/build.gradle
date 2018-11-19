@@ -48,7 +48,7 @@ android {
                 variant.outputs.each { output ->
                     def outputFile = output.outputFile
                     if (outputFile != null && outputFile.name.endsWith('.apk')) {
-                        // 输出apk名称为zejian_v1.0_2015-01-15_wandoujia.apk
+                        // 输出apk名称为ToolsLib_v1.0_2018-11-15_wandoujia.apk
                         def fileName = "ToolsLib_v${defaultConfig.versionName}_${releaseTime()}_${variant.productFlavors[0].name}.apk"
                         output.outputFile = new File(outputFile.parent, fileName)
                     }
@@ -100,6 +100,8 @@ dependencies {
     compile 'com.teprinciple:updateapputils:1.4'
     compile 'com.zxy.android:recovery:1.0.0'
     compile "com.android.support:multidex:1.0.1"
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
     testCompile 'junit:junit:4.12'
     compile project(path: ':utilslib')
 
