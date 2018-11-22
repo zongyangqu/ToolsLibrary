@@ -30,7 +30,7 @@ import qzy.com.toolslibrary.bean.ZhouBean;
 
 public class StandardMultiAdapter extends RecyclerView.Adapter {
 
-  public static final int SPAN_SIZE = 10;
+  public static final int SPAN_SIZE = 120;
 
   private static final int TYPE_ZHAO = 1000;
   private static final int TYPE_QIAN = 1001;
@@ -39,6 +39,8 @@ public class StandardMultiAdapter extends RecyclerView.Adapter {
   private static final int TYPE_ZHOU = 1004;
   private static final int TYPE_WU = 1005;
   private static final int TYPE_ZHENG = 1006;
+
+  private static final int TYPE_QIAN_1 = 1007;
 
   private List<Object> data = new ArrayList<>();
 
@@ -61,7 +63,12 @@ public class StandardMultiAdapter extends RecyclerView.Adapter {
     if (object instanceof ZhaoBean) {
       return TYPE_ZHAO;
     } else if (object instanceof QianBean) {
-      return TYPE_QIAN;
+      QianBean qb = (QianBean) object;
+      if(qb.getIndex() == 0 || qb.getIndex() == 3){
+        return TYPE_QIAN_1;
+      }else{
+        return TYPE_QIAN;
+      }
     } else if (object instanceof SunBean) {
       return TYPE_SUN;
     } else if (object instanceof LiBean) {
@@ -81,7 +88,7 @@ public class StandardMultiAdapter extends RecyclerView.Adapter {
     if (viewType == TYPE_ZHAO) {
       return new BannerHolder(
           LayoutInflater.from(parent.getContext()).inflate(R.layout.item_banner, parent, false));
-    } else if (viewType == TYPE_QIAN) {
+    } else if (viewType == TYPE_QIAN || viewType == TYPE_QIAN_1) {
       return new TypeAHolder(
           LayoutInflater.from(parent.getContext()).inflate(R.layout.item_type_a, parent, false));
     } else if (viewType == TYPE_SUN) {
@@ -111,7 +118,7 @@ public class StandardMultiAdapter extends RecyclerView.Adapter {
 
     if (viewType == TYPE_ZHAO) {
       ((BannerHolder) holder).bind(position, (ZhaoBean) object);
-    } else if (viewType == TYPE_QIAN) {
+    } else if (viewType == TYPE_QIAN || viewType == TYPE_QIAN_1) {
       ((TypeAHolder) holder).bind(position, (QianBean) object);
     } else if (viewType == TYPE_SUN) {
       ((TypeBHolder) holder).bind(position, (SunBean) object);
@@ -137,7 +144,9 @@ public class StandardMultiAdapter extends RecyclerView.Adapter {
     if (viewType == TYPE_ZHAO) {
       return SPAN_SIZE;
     } else if (viewType == TYPE_QIAN) {
-      return SPAN_SIZE / 5;
+      return SPAN_SIZE /4;
+    } else if (viewType == TYPE_QIAN_1) {
+      return SPAN_SIZE / 2;
     } else if (viewType == TYPE_SUN) {
       return SPAN_SIZE;
     } else if (viewType == TYPE_LI) {

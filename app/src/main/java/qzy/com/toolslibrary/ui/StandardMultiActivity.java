@@ -49,7 +49,7 @@ public class StandardMultiActivity extends BaseActivity{
 
         //net work request data
         List<ZhaoBean> zhaoList = ModelHelper.getZhaoList(1);
-        List<QianBean> qianList = ModelHelper.getQianList(10);
+        List<QianBean> qianList = ModelHelper.getQianListCopy(10);
         List<SunBean> sunList = ModelHelper.getSunList(1);
         List<LiBean> liList = ModelHelper.getLiList(4);
         List<ZhouBean> zhouList = ModelHelper.getZhouList(10);
